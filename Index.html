@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi primer Web</title>
+    <style>
+        body {
+            background-color: #F5F5F5;
+            font-family: sans-serif;
+            text-align: center;
+        }
+        .div_Title{
+            text-align: center;
+        }
+        .h1_title{
+            color:rgb(78, 31, 122);
+        }
+        .h4_subTitle{
+            color:rgb(114, 5, 109)
+        }
+        .p_Parrafo{
+            text-align: center;
+            text-anchor: middle;
+            justify-content: stretch;
+        }
+        .label_Input{
+            text-decoration: dotted;
+        }
+        .input_Text{
+            border-radius: 5px;
+            box-shadow: 2px;
+            min-width: 250px;
+            min-height: 30px;
+            border-color: rgb(148, 225, 253);
+        }
+        .input_Text:hover{
+            border-color: rgb(78, 31, 122);;
+        }
+        .button_Btn{
+            margin-top: 10px;
+            min-height: 30px;
+            min-width: 80px;
+        }
+    </style>
+</head>
+<body>
+    <container>
+        <div>
+            <div class="div_Title">
+                <h1 class="h1_title">Esto es el título  principal</h1>
+                <h4 class="h4_subTitle">Esto es un título secundario</h4>
+            </div>
+            <div class="div_Formulario">
+                <p class="p_Parrafo">
+                    Esto es un párrafo, el texto se acomoda de forma automática en forma de párrafo. <br/> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus natus, deserunt libero rerum accusamus beatae dicta incidunt provident a, eos laboriosam odio vitae eum sint architecto itaque. Dolorum, totam nam!
+                </p>
+                <br /> <!-- <br> es para poner un salto de linea, y esto es un comentario que no sale en la web  -->
+
+                <label for="txt_Input" class="label_Input">Esto es una etiqueta</label>
+                <br/>
+                <input type="text" class="input_Text" placeholder="Esto es una entrada de texto" id="txt_Input" minlength="5" />
+
+                <br />
+
+                <button type="button" class="button_Btn" onclick="unaFuncion()">Esto es un botón</button>
+            </div>
+        </div>
+    </container>
+
+    <script type="">
+        function unaFuncion(inputText) {
+            var _Mensaje = document.getElementById("txt_Input").value;
+            if (_Mensaje.length > 1) {
+                alert("Esto es una alerta con mensaje: " + _Mensaje);
+            }else{
+                alert("Esto es una alerta sin mensaje");
+            }
+        }
+    </script>
+</body>
+</html>
